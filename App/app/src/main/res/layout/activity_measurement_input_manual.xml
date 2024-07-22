@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.measurements.BiometricManualInputActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_measurement_manual_weight"
+        style="@style/PalliCare.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/card_measurement_manual_bp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_measurement_manual_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText_measurement_input_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/defaultMargin"
+                android:ems="10"
+                android:hint="Gewicht"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <TextView
+                android:id="@+id/textView_measurement_input_weight"
+                style="@style/PalliCare.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_measurement_input_weight"
+                android:layout_toEndOf="@+id/editText_measurement_input_weight"
+                android:text="@string/editText_measurementInput_weight_kg" />
+
+            <Button
+                android:id="@+id/button_measurement_input_weight_save"
+                style="@style/PalliCare.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_measurement_input_weight"
+                android:onClick="saveWeight"
+                android:text="@string/btn_measurementInput_weight_save"
+                app:icon="@drawable/register_save"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_measurement_manual_bp"
+        style="@style/PalliCare.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_measurement_manual_weight">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_measurement_manual_bp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_measurement_input_bp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/defaultMargin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText_measurement_input_bp_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/defaultMargin"
+                    android:layout_marginBottom="@dimen/defaultMargin"
+                    android:layout_weight="5"
+                    android:hint="Systolisch"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+                <TextView
+                    android:id="@+id/textView_measurement_input_bp_slash"
+                    style="@style/PalliCare.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="@string/editText_measurementInput_bp_slash" />
+
+                <EditText
+                    android:id="@+id/editText_measurement_input_bp_second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/defaultMargin"
+                    android:layout_marginBottom="@dimen/defaultMargin"
+                    android:layout_weight="5"
+                    android:hint="Diastolisch"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+                <TextView
+                    android:id="@+id/textView_measurement_input_bp_mmHG"
+                    style="@style/PalliCare.TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="@string/editText_measurementInput_bp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_measurement_input_bp_save"
+                style="@style/PalliCare.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout_measurement_input_bp"
+                android:onClick="saveBP"
+                android:text="@string/btn_measurementInput_bp_save"
+                app:icon="@drawable/register_save"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    default spacings-->
+    <dimen name="defaultConstraint">16dp</dimen>
+    <dimen name="defaultMargin">8dp</dimen>
+    <dimen name="defaultPadding">16dp</dimen>
+    <dimen name="middlePadding">8dp</dimen>
+    <dimen name="smallPadding">4dp</dimen>
+
+
+    <!--    card view defaults-->
+    <dimen name="defaultCardElevation">2dp</dimen>
+    <dimen name="defaultCardCornerRad">3dp</dimen>
+
+
+
+</resources>

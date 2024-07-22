@@ -1,0 +1,44 @@
+\documentclass[12pt,twoside]{article}
+
+\newcommand{\reporttitle}{PalliCare}
+\newcommand{\reportauthor}{Patrick H\"ofner, Klaus Schmidt, Ulla Sternemann, Insa Suchantke, Daniel Wagner}
+\newcommand{\scrummaster}{Malte Ollenschl\"ager, Imrana Abdullahi Yari}
+\newcommand{\projectpartner}{Dr. med. Tobias Steigleder, UK Erlangen}
+
+% include files that load packages and define macros
+\input{includes} % various packages needed for maths etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% front page
+\input{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
+\section{Introduction}
+\subsection{Definition of Palliative Care}
+Palliative care is the treatment, accompaniment and care of seriously ill and dying people \cite{rki1}. More than half of the palliative patients suffer from cancer, 29.2 \% suffer from a disease of the circulatory system, 5.6 \% from a neurological and 0.3 \% from other underlying diseases \cite{pruetz}. The aim of palliative care is to improve the quality of the remaining life of such patients and their families by preventing and alleviating the disease through early detection, assessment and treatment of pain and psychological, spiritual and psychosocial problems \cite{radbruch}.  
+\newline  In Germany, approximately 90 \% of the nearly 850,000 deaths per year require palliative care \cite{radbruch}. The 326 specialized ambulatory palliative care (SAPC) teams and more than 330 palliative stations and units, which exist in Germany, need support to be able to fulfill the wish of 76 \% of Germans to die at home \cite{hospiz, grote}. Unfortunately only 20 \% of Germans die at home. Almost 46 \% die in hospitals, 31 \% in old people's homes and 3 \% in hospices \cite{grote}.
+\newline Obviously, many more people want to stay and could also die at home if there would be sufficient capacity of care services. It is therefore necessary to develop a product that supports the SAPC teams and gives the patient the opportunity to die at home or to be cared for at home for as long as possible.  
+
+\subsection{Project explanation}
+This project has developed a product called \textit{PalliCare}. For this product an android smartphone application (app) for the patient and a web interface for the SAPC teams has been developed.  
+The smartphone app which has been developed in Java has been designed for two user groups, on the one hand for palliative patients and on the other hand for their closest relatives, also called next of kin (nok). The app records and displays the biometric (body weight, blood pressure) and psychometric data (a minimal documentation system called MIDOS questionnaire \cite{midos}) for the palliative patients. Body weight is measured with a body scale which is connected with the app via Bluetooth connection. The blood pressure and the MIDOS questionnaire have to be entered manually. In addition, the patient can store emergency contacts, to whom she/he can contact via an emergency button if she/he is not feeling well. 
+In the nok mode of the app, the relatives can view the recorded data of the patient, if it has been authorized by the patient beforehand.
+The web interface is intended for the SAPC teams to view the health status of their patients. The data of the patients is shown and listed by priority.
+
+\include{Student1_Insa/Student1_Insa}
+\include{Student2_Klaus/Student2_Klaus}
+\include{Student3_Patrick/Student3_Patrick}
+\include{Student4_Ulla/Student4_Ulla}
+\include{Student5_Daniel/Student5_Daniel}
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

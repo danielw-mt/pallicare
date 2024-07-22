@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.patient.questionnaire.QuestionnaireMidos1P2Info">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quest_select_card_info"
+        style="@style/PalliCare.CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/quest_select_textview_info"
+            style="@style/PalliCare.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quest_suffer_info" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quest_select_card_input"
+        style="@style/PalliCare.CardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quest_select_card_info">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            TODO Klaus: style for edit text? -->
+            <EditText
+                android:id="@+id/quest_select_edittext_suffer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/quest_suffer_edit_hint"
+                android:inputType="textPersonName"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/quest_select_button_add_suffer"
+                app:layout_constraintEnd_toStartOf="@+id/quest_select_button_add_suffer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/quest_select_button_add_suffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <ScrollView
+                android:id="@+id/quest_select_scrollview_suffer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/quest_select_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quest_select_button_add_suffer">
+
+                <LinearLayout
+                    android:id="@+id/quest_select_linlay_suffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/linearlayoutdivider"
+                    android:orientation="vertical"
+                    android:showDividers="middle" />
+            </ScrollView>
+
+            <Button
+                android:id="@+id/quest_select_next"
+                style="@style/PalliCare.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quest_btn_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,576 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Template - Innovationlab for Wearable and Ubiquitous Computing (Limit: 4 Pages)}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+%\author{\IEEEauthorblockN{Michael Shell}
+%\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
+%Georgia Institute of Technology\\
+%Atlanta, Georgia 30332--0250\\
+%Email: http://www.michaelshell.org/contact.html}
+%\and
+%\IEEEauthorblockN{Homer Simpson}
+%\IEEEauthorblockA{Twentieth Century Fox\\
+%Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\and
+%\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%\IEEEauthorblockA{Starfleet Academy\\
+%San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212\\
+%Fax: (888) 555--1212}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+\author{\IEEEauthorblockN{Michael Shell,
+Homer Simpson,
+James Kirk, 
+Montgomery Scott and
+Eldon Tyrell}\\
+\IEEEauthorblockA{School of Electrical and Computer Engineering\\
+Georgia Institute of Technology,
+Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+\IEEEauthorblockA{Twentieth Century Fox, Springfield, USA\\
+Email: homer@thesimpsons.com}}
+
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+
+The abstract summarizes your complete project and is the last thing that you write. That means that the reader can find parts of the introduction, methods, results, discussion and outlook in roughly 200 words. After the reader is finished with the abstract he/she must be eager to read the complete article. \\
+The abstract can start with a fact that no one can challenge like ``cats are nice animals''. Then you define a problem in this context like ``However, cats smell''. You go on with introducing your way of solving this problem like ``we used shampoo to solve this problem'' and also mention the most striking result like "we were able to make 89~\% of our test cats odorant''. You finish with an outlook and advertise your work like ``the idea of washing cats can be a first step of significantly improving the relation of cats and humans''. \\
+The abstract is mainly written in simple past, present tense is only used in facts you are absolutely sure about.
+
+\end{abstract}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+%Introduction
+\section{Introduction}
+The introduction describes the problem you solved and why it is important. You start with a general problem definition and subsequently a more detailed description of the problem you faced. Then, you provide existing solutions to this problem or related problems and their solution. Make sure the reader understands the differences! You HAVE to use references in this section to provide an idea what has already been done in this research area. Mainly, you cite journal articles \cite{JournalArticle}, conference proceedings \cite{ProceedingsArticle}, books \cite{Book} and web links \cite{Weblink}. Having defined the body of knowledge you introduce how you are going to solve the problem. You finish with a crystal clear purpose of your project or contribution to the problem.\\
+The literature review is written in simple past. The rest of the introduction is generally present tense. You can also use present tense for giving insight in what will be shown in the article. A rule of thumb are six references of other solutions or related projects, solutions and systems.  
+
+%Methods
+\section{Methods}
+This section includes everything the reader needs to understand your system and results. Things you just used only have to be mentioned and cited. For data recording, we used the mobile system developed by Kugler et al. \cite{ProceedingsArticle}. Make sure to describe your contribution as short and precise as possible and as detailed as needed to reimplement it. You have to include a description of data, hardware, math, algorithms, system structure and evaluation methods and everything that was important to solve the defined problem. Make sure to order the methods so that the reader can follow your description. First things first! Make sure to structure the methods in a proper way. Use a dry description and try not to teach the reader. \\
+The methods part is written in simple past, even if you created a live system that can still do things. It is only important what the system did on the data you presented. Only describe the best and final version of the system. The reader is not interested what you did wrong in developing the final system. Things that did not work don't have to be mentioned.
+
+\subsection{Structure}
+A rule of thumb is that you describe one fact in each paragraph. That means, if you go to the next aspect, you start with a new paragraph. Try to maintain a logical structure throughout the paper where paragraphs build upon each other.\\
+A good way to structure the paper are subsections. You can also use enumerations to structure the paper. Use an unordered list if the items don't have a structure.
+\begin{itemize}
+\item Apple
+\item Peach
+\item Melon
+\item Grape
+\end{itemize}
+Use an ordered list if there is a hierarchical structure in the list.
+\begin{enumerate}
+\item Erlangen
+\item Bavaria
+\item Germany
+\item Europe
+\end{enumerate}
+You should always have more than one subsection. Otherwise the structure does not make sense.
+
+\subsection{Figures, equations and tables}
+Add figures and cite the figures at the end of a sentence (Fig.~\ref{adidas}). Good figures make a paper a lot better. Don't use figures if they are of bad quality or not exactly what you want to show with it. Latex puts figures where they fit best regarding the document structure. Often, figures are not at the same place as they are defined in the source code. Don't worry too much about that. Often, they are place on top of a page but the desired (not defined) positioning can be specified in the brackets after begin\{figure\}. Make sure the figure is readable when printed in black and white. This means that the lines in a plot have to be of different shape (dotted, dashed,\dots) and the coloring has to be adapted if used. Print the paper in black and white if unsure.\\
+Add important equations that a relevant for understanding your system and cite them (Eq.~\ref{einstein}). Every variable has to be explained. The variable $f$ denotes the force, $m$ the mass and $c$ a constant. Make sure to reference the equation or provide an explanation. When writing about value make sure to insert a safe blank between value and unit like 9.81~g or 67~\% to avoid a line break between value and unit. The safe blank is also needed when referencing figures.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=3.5cm]{adidas.png}
+\caption{The caption of a figure explains the complete figure. The reader must be able to completely understand what he/she sees with the information in the caption. Do not expect the reader to read the text before trying to understand the figure.}
+\label{adidas}
+\end{figure}
+
+\begin{equation}
+f = m \times c^2
+\label{einstein}
+\end{equation}
+
+\subsection{Proper use of language}
+Make sure to use proper English in your papers. Get the paper reviewed by another person to avoid stupid typos and check the language for common mistakes. If the paper is important, try to find a native speaker for review. Some common language related problems:
+\begin{itemize}
+\item Make sure to use lower case for nouns.
+\item There are no strict rules for punctuation in English and, in some cases, the rules are different to German rules. One common problem is the use of a comma in a relative clause. There is no comma after ``that'' and ``which'' if it is a restrictive relative clause like ``The book which I read is well written.''. There is a comma if it is a non-restrictive relative clause like ``That book, which incidentally I just finished reading, is well written.''. A rule of thumb is that you use a comma if the relative sentence is not needed to make it a proper sentence.
+\item Use short sentence in paratactic form. This is easier to read. Long sentences are hard to understand. You don't write poems that are supposed to be of nice language.
+\item You can alternate between active and passive. Contrary to German, the use of active is also elegant. When talking about yourself you should write ``the author'' or ``we''. 
+\item Do not abbreviate terms like ``do not'', ``cannot'' or ``it is''.
+\item Find scientific synonyms for colloquial language. You can start colloquial and then transform into scientific language afterwards. If you are unsure how to start you can use a phrasebank \cite{Phrasebank} to copy nice formulations.
+\item If you are not sure if you found the right word in a dictionary use a single language dictionary like \cite{Weblink}.
+\item Numbers: write words when referring to numerals below ten, referring to fractions, referring to approximate numbers and at the beginning of a sentence. Use figures when referring to sets of numbers, numbers including decimal points and when referring to pages. Make sure to use a decimal point instead of a comma as in German. 
+\item	Get yourself inspired from the literature. Use nice formulations from other papers. Never copy words but copy style.  
+\end{itemize} 
+It is very important to be consistently in wording and punctuation. Call the same things with the same name even if you think that it is boring. Use the same punctuation rule throughout the complete paper. 
+
+\subsection{Template and length}
+You should always avoid to change the template. It was created for a good reason. If your manuscript is too long you should change the content and not the template. Concentrate on the purpose of your project and get rid of side aspects. Use references and keep work of others short. You HAVE to learn to describe your work in a given length. A rule of thumb is a partitioning of 15 \% (Introduction), 40 \% (Methods), 10 \% (Results), 25 \% (Discussion) and 10 \% (Summary and outlook).
+
+\subsection{Source code and devices}
+Normally, you don't present source code. The reader is more interested in a flow chart to understand how your algorithm works.  Describe the most important steps of algorithms in detail and briefly describe other parts. Always provide a version when referring to other software packages or libraries. 
+If you talk devices like smart phones or treadmills provide the manufacturer and the companies headwater details like (Google Inc., Mountain View, USA). 
+
+%Results
+\section{Results}
+You describe the pure results in this section. Performance measures, reference system and experimental setup have to be explained in the methods part. Don't provide an interpretation of the results in this section, just talk about the results. Don't provide reasons why your system didn't work in this or that condition. Just mention that this was the case. Quantitative results are most striking and you might want to sum them up in a table (Tab.~\ref{result_table}). If you have a lot of different results, pick the best and most important ones. Focus on the purpose of your system! You can use the same structure as in the methods section if appropriate.\\
+The result section is written in simple past. Even if you have a live system, you describe the results as achieved in the evaluation. 
+
+\begin{table}[!t]
+\caption{The caption in tables has to be self explaining like in figures (see Fig.~\ref{adidas}). Make sure to explain all abbreviations that you use in the caption.}
+\begin{center}
+\begin{tabular}{c|cccccccccc}
+& \ S1 \ &\ S2 \ &\ S3 \ & \ S4 \ & \ S5 \ & \ S6 \ & \ S7 \ & \ S8 \ & \ S9 \ & \ S10\\
+\hline
+RULE&0.5&0.7&0.3&0.7&0.8&0.2&0.3&0.5&0.7&0.9\\
+EPIC&0.1&0.1&0.1&0.1&0.1&0.1&0.1&0.1&0.1&0.1\\
+\end{tabular}
+\label{result_table}
+\end{center}
+\end{table}
+
+%Discussion
+\section{Discussion}
+Begin with a short problem specific summary. Discuss every aspect from the result section and give an interpretation of the results. You can use the same structure as in the results. Why is the algorithm so good/bad? What are limitations or assumptions? What was remarkable in the project and can be seen in the data. Make sure to cite the literature when comparing to existing systems or algorithms. Always mention pros and cons! Discuss global strength and weakness and concentrate on major aspects.\\
+The discussion is mainly written in simple past. You can use present tense when talking about facts that you are absolutely sure about. If you are very self confident, you can deduce facts from your findings but often conditional formulations are more polite. Sometimes it is better to combine the discussion with an outlook so you might want to use future as well. 
+ 
+%Discussion
+\section{Summary and outlook}
+Sum up the most important project findings and mention what the next steps, improvements, enhancements could be. The outlook can consist of ideas that will be hard to realize. Don't just think about tomorrow, think about the next ten years. You can finish with advertising your work and point out the most important finding or development again.\\
+The summary part is written in simple past. The outlook is written in present tense or future.
+
+
+% conference papers do not normally have an appendix
+
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+
+
+The authors would like to thank...
+
+
+
+
+
+\begin{thebibliography}{5}
+
+% This is a journal article
+\bibitem{JournalArticle} Cook, G. et al.: {Pre-Participation Screening: The Use of Fundamental Movements as an Assessment of Function - Part 1}. North American Journal of Sports Physical Therapy 1(2), 62--72 (2006) 
+
+%This is an article in conference proceedings
+\bibitem{ProceedingsArticle}Kugler, P. et al.: {Mobile Recording System for Sport Applications}. In: Proc. of the 8th International Symposium on Computer Science in Sport (IACSS2011) , pp. 67--70, Shanghai (2011)  
+
+%This is a book
+\bibitem{Book}Theodoridis, S. and Koutroumbas, K.: {Pattern Recognition}. Academic Press (2008)
+
+%This is a weblink
+\bibitem{Weblink}Longman Dictionary {http://www.ldoceonline.com/}. Last visited: 16.09.2013 (2013)  
+
+\bibitem{Phrasebank}Academic Phrasebank {http://www.phrasebank.manchester.ac.uk//}. Last visited: 16.09.2013 (2013)  
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+

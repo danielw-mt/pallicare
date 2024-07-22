@@ -1,0 +1,6 @@
+
+.sync-exclude.lst
+
+App/debug/pallicare_database.db
+
+App/debug/

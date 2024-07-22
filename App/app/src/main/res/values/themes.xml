@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+~ Copyright (C) 2019 The Android Open Source Project
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~      http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.PalliCare" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--        Show light(false) or dark(true) icons in the status bar (at the top) -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/color_secondary</item>
+
+        <!--        Show light(false) or dark(true) icons in the navigation bar (at the bottom) -->
+        <item name="android:navigationBarColor">@color/color_secondary</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
+        <!--        This defines the color between the navigation bar and the bottom of the app. It is very thin. -->
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">
+            ?colorControlHighlight
+        </item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
+        <item name="colorAccent">?colorSecondary</item>
+
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@color/color_on_error</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.PalliCare.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.PalliCare.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.PalliCare.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.PalliCare.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.PalliCare.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.PalliCare.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.PalliCare.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.PalliCare.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.PalliCare.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.PalliCare.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.PalliCare.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.PalliCare.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.PalliCare.Overline</item>
+        <item name="fontFamily">@font/segoeui</item>
+        <item name="android:fontFamily">@font/segoeui</item>
+
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyTheme.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MyTheme.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.MyTheme.LargeComponent
+        </item>
+
+        <!--Component styles-->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert
+        </item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>
+
+
+    </style>
+
+
+    <style name="SplashStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!-- Optional, on Android 5+ you can modify the color_secondary color to match the windowBackground color for further branding-->
+        <!-- <item name="color_secondary">@android:color/white</item> -->
+    </style>
+
+</resources>

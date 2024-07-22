@@ -1,0 +1,32 @@
+\BOOKMARK [1][]{section.1}{1 Introduction}{}% 1
+\BOOKMARK [2][]{subsection.2}{1.1 Definition of Palliative Care}{section.1}% 2
+\BOOKMARK [2][]{subsection.3}{1.2 Project explanation}{section.1}% 3
+\BOOKMARK [1][]{section.4}{2 Insa Suchantke}{}% 4
+\BOOKMARK [2][]{subsection.5}{2.1 Available smartphone apps in palliative care}{section.4}% 5
+\BOOKMARK [2][]{subsection.11}{2.2 PalliCare Smarthpone App - Design and layout decisions}{section.4}% 6
+\BOOKMARK [2][]{subsection.16}{2.3 Welcome and Permission screens}{section.4}% 7
+\BOOKMARK [1][]{section.19}{3 Klaus-G\374nther Schmidt}{}% 8
+\BOOKMARK [2][]{subsection.20}{3.1 Prototyping with Adobe XD}{section.19}% 9
+\BOOKMARK [2][]{subsection.24}{3.2 Defining a general app layout}{section.19}% 10
+\BOOKMARK [3][]{subsubsection.25}{3.2.1 BaseActivitys}{subsection.24}% 11
+\BOOKMARK [3][]{subsubsection.27}{3.2.2 Emergency Screen}{subsection.24}% 12
+\BOOKMARK [3][]{subsubsection.30}{3.2.3 Help Text}{subsection.24}% 13
+\BOOKMARK [2][]{subsection.37}{3.3 MIDOS questionnaire}{section.19}% 14
+\BOOKMARK [2][]{subsection.40}{3.4 Receiving data from a scale}{section.19}% 15
+\BOOKMARK [1][]{section.44}{4 Patrick H\366fner}{}% 16
+\BOOKMARK [2][]{subsection.45}{4.1 Webserver}{section.44}% 17
+\BOOKMARK [2][]{subsection.50}{4.2 Database Schema}{section.44}% 18
+\BOOKMARK [2][]{subsection.54}{4.3 Visualization of biometric and psychometric information}{section.44}% 19
+\BOOKMARK [2][]{subsection.62}{4.4 REST-API}{section.44}% 20
+\BOOKMARK [1][]{section.67}{5 Ulla Sternemann}{}% 21
+\BOOKMARK [2][]{subsection.68}{5.1 Databases in Android applications}{section.67}% 22
+\BOOKMARK [2][]{subsection.72}{5.2 Database implementation using Room}{section.67}% 23
+\BOOKMARK [3][]{subsubsection.73}{5.2.1 Architecture of a Room database}{subsection.72}% 24
+\BOOKMARK [3][]{subsubsection.77}{5.2.2 Communication of database and UI}{subsection.72}% 25
+\BOOKMARK [2][]{subsection.83}{5.3 Data synchronization using Retrofit}{section.67}% 26
+\BOOKMARK [1][]{section.85}{6 Daniel Wagner}{}% 27
+\BOOKMARK [2][]{subsection.86}{6.1 Scale sourcing}{section.85}% 28
+\BOOKMARK [2][]{subsection.88}{6.2 Experimental scale integration}{section.85}% 29
+\BOOKMARK [2][]{subsection.90}{6.3 Setup of web-app project}{section.85}% 30
+\BOOKMARK [2][]{subsection.93}{6.4 Backend development}{section.85}% 31
+\BOOKMARK [2][]{subsection.123}{6.5 Frontend development}{section.85}% 32

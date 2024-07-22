@@ -1,0 +1,134 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Codepath()]{retrofit2}
+Codepath.
+\newblock {Consuming APIs with Retrofit}.
+\newblock
+  \url{https://guides.codepath.com/android/consuming-apis-with-retrofit}.
+\newblock Accessed: 2020-03-22.
+
+\bibitem[developer codelabs()]{livedata2}
+Android developer codelabs.
+\newblock {Android Room with a View - Java Codelab}.
+\newblock
+  \url{https://codelabs.developers.google.com/codelabs/android-room-with-a-view/}.
+\newblock Accessed: 2020-03-18.
+
+\bibitem[developer guides()]{room2}
+Android developer guides.
+\newblock {Save data in a local database using Room}.
+\newblock \url{https://developer.android.com/training/data-storage/room}.
+\newblock Accessed: 2020-03-16.
+
+\bibitem[Grote-Westrick and Volbracht(2015)]{grote}
+M~Grote-Westrick and E~Volbracht.
+\newblock {Faktencheck Gesundheit. Spotlight Gesundheit. Daten, Analysen,
+  Perspektiven. Palliativversorgung}.
+\newblock
+  \url{https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/SPOTGes_VV_Palliativversorgung_2015.pdf},
+  2015.
+\newblock Accessed: 2020-03-09.
+
+\bibitem[Justinmind(2018)]{just}
+Justinmind.
+\newblock {20 inspiring splash screen designs. UX and Prototyping}.
+\newblock
+  \url{https://www.justinmind.com/blog/20-inspiring-splash-screen-designs},
+  2018.
+\newblock Accessed: 2020-01-11.
+
+\bibitem[Koch-Institut(2015)]{rki1}
+Robert Koch-Institut.
+\newblock {Gesundheitsberichterstattung des Bundes gemeinsam von RKI und
+  Destatis. Gesundheit in Deutschland. Palliativversorgung}.
+\newblock
+  \url{https://www.rki.de/DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesInDtld/gesundheit_in_deutschland_2015.pdf?__blob=publicationFile},
+  2015.
+\newblock Accessed: 2020-03-09.
+
+\bibitem[Medium(2017)]{retrofit1}
+Medium.
+\newblock {Retrofit - A simple Android tutorial}.
+\newblock
+  \url{https://medium.com/@prakash_pun/retrofit-a-simple-android-tutorial-48437e4e5a23},
+  2017.
+\newblock Accessed: 2020-03-20.
+
+\bibitem[Medium(2019{\natexlab{a}})]{livedata1}
+Medium.
+\newblock {Using Room Database with LiveData - Android Jetpack}.
+\newblock
+  \url{https://medium.com/mindorks/using-room-database-with-livedata-android-jetpack-cbf89b677b47},
+  2019{\natexlab{a}}.
+\newblock Accessed: 2020-03-18.
+
+\bibitem[Medium(2019{\natexlab{b}})]{room1}
+Medium.
+\newblock {Using Room Database - Android Jetpack}.
+\newblock
+  \url{https://medium.com/mindorks/using-room-database-android-jetpack-675a89a0e942},
+  2019{\natexlab{b}}.
+\newblock Accessed: 2020-03-18.
+
+\bibitem[Nwosu and Mason(2012)]{nwosu}
+AC~Nwosu and S~Mason.
+\newblock \emph{Supportive and Palliative Care}, 2012.
+
+\bibitem[Prütz and Saß(2017)]{pruetz}
+F~Prütz and AC~Saß.
+\newblock {Daten zur Palliativversorgung in Deutschland. Welche Datenquellen
+  gibt es, und was sagen sie aus?}
+\newblock
+  \url{https://edoc.rki.de/bitstream/handle/176904/2943/27htYoRLOnIM6.pdf?sequence=1&isAllowed=y},
+  2017.
+\newblock Accessed: 2020-03-15.
+
+\bibitem[Radbruch et~al.(2000)Radbruch, Sabatowski, Loick, Jonen-Thielemann,
+  Elsner, and Hörmann]{midos}
+L~Radbruch, R~Sabatowski, G~Loick, I~Jonen-Thielemann, F~Elsner, and
+  EA~Hörmann.
+\newblock {MIDOS – validation of a minimal documentation system for
+  palliative medicine}.
+\newblock \emph{Schmerz (Berlin, Germany)}, 14:\penalty0 231--9, 08 2000.
+\newblock \doi{10.1007/s004820000034}.
+
+\bibitem[Radbruch et~al.(2015)Radbruch, Andersohn, and Walker]{radbruch}
+L~Radbruch, F~Andersohn, and J~Walker.
+\newblock {Faktencheck Gesundheit. Palliativversorgung. Analyse ausgewähler
+  Behandlungen am Lebensende}.
+\newblock
+  \url{https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/Studie_VV__FCG_Ueber-Unterversorgung-palliativ.pdf},
+  2015.
+\newblock Accessed: 2020-03-09.
+
+\bibitem[State(2017)]{liquide}
+Liquide State.
+\newblock {App Onboarding: What Is It and Why Do We Need It?}
+\newblock \url{https://liquid-state.com/what-is-app-onboarding}, 2017.
+\newblock Accessed: 2020-01-11.
+
+\bibitem[und PalliativVerband~e.V.()]{hospiz}
+Deutscher~Hospiz und PalliativVerband~e.V.
+\newblock {Zahlen und Fakten}.
+\newblock \url{https://www.dhpv.de/service_zahlen-fakten.html}.
+\newblock Accessed: 2020-03-09.
+
+\bibitem[Wei(2012)]{wei2012android}
+Jason Wei.
+\newblock \emph{Android Database Programming}.
+\newblock Community experience distilled. Packt Publishing, 2012.
+
+\bibitem[Zabel(2019)]{zabel}
+M~Zabel.
+\newblock {Diese Apps für Senioren erleichtern den Alltag}.
+\newblock
+  \url{https://www.otto.de/updated/ratgeber/diese-apps-fuer-senioren-erleichtern-den-alltag-73306/},
+  2019.
+\newblock Accessed: 2019-11-09.
+
+\end{thebibliography}

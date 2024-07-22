@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.patient.home.PatientOverviewActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_patient_overview_biometric"
+        style="@style/PalliCare.CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cv_patient_overview_psychometric"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_patient_overview_biometric_text"
+                style="@style/PalliCare.TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_patient_overview_biometric_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_patient_overview_biometric_view"
+                style="@style/PalliCare.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="launchMeasurementActivity"
+                android:text="@string/btn_patient_overview_biometric_view"
+                app:icon="@drawable/overview_graph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_patient_overview_biometric_input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_overview_biometric_text" />
+
+            <Button
+                android:id="@+id/btn_patient_overview_biometric_input"
+                style="@style/PalliCare.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="launchSelectMeasurementInputActivity"
+                android:text="@string/btn_patient_overview_biometric_input"
+                app:icon="@drawable/overview_insert"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_patient_overview_biometric_view"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_overview_biometric_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_patient_overview_psychometric"
+        style="@style/PalliCare.CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_patient_overview_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_patient_overview_biometric">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_patient_overview_psychometric_text"
+                style="@style/PalliCare.TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_patient_overview_psychometric_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_patient_overview_psychometric_view"
+                style="@style/PalliCare.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="launchQuestionnaireOverviewActivity"
+                android:text="@string/btn_patient_overview_psychometric_view"
+                app:icon="@drawable/overview_graph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_patient_overview_psychometric_input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_overview_psychometric_text" />
+
+            <Button
+                android:id="@+id/btn_patient_overview_psychometric_input"
+                style="@style/PalliCare.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="launchQuestionnaireActivity"
+                android:text="@string/btn_patient_overview_psychometric_input"
+                app:icon="@drawable/overview_questionnaire"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_patient_overview_psychometric_view"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_overview_psychometric_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_patient_overview_settings"
+        style="@style/PalliCare.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="launchSettingsActivity"
+        android:text="@string/btn_patient_overview_settings"
+        app:icon="@drawable/overview_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: coursework.aux
+A level-1 auxiliary file: Student1_Insa/Student1_Insa.aux
+A level-1 auxiliary file: Student2_Klaus/Student2_Klaus.aux
+A level-1 auxiliary file: Student3_Patrick/Student3_Patrick.aux
+A level-1 auxiliary file: Student4_Ulla/Student4_Ulla.aux
+A level-1 auxiliary file: Student5_Daniel/Student5_Daniel.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 116 of file references.bib
+ : 
+ : title = {Palliative medicine and smartphone: an opportunity for innovation?},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in retrofit2
+Warning--empty year in livedata2
+Warning--empty year in room2
+Warning--empty title in nwosu
+Warning--empty year in hospiz
+(There was 1 error message)

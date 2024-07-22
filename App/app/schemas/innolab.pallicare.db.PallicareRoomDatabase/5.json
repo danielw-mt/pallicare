@@ -1,0 +1,745 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "362131c9004594fab22712992aabfed6",
+    "entities": [
+      {
+        "tableName": "device",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`device_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `hw_address` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, `patient_id` INTEGER NOT NULL, `device_type_id` INTEGER NOT NULL, FOREIGN KEY(`patient_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`device_type_id`) REFERENCES `device_type`(`device_type_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "deviceId",
+            "columnName": "device_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hwAddress",
+            "columnName": "hw_address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patient_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceTypeId",
+            "columnName": "device_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "device_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_device_device_id",
+            "unique": true,
+            "columnNames": [
+              "device_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_device_device_id` ON `${TABLE_NAME}` (`device_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "patient_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          },
+          {
+            "table": "device_type",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "device_type_id"
+            ],
+            "referencedColumns": [
+              "device_type_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "device_type",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`device_type_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "deviceTypeId",
+            "columnName": "device_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "device_type_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_device_type_device_type_id",
+            "unique": true,
+            "columnNames": [
+              "device_type_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_device_type_device_type_id` ON `${TABLE_NAME}` (`device_type_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "measurement_bloodpressure",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`measurement_bloodpressure_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `systolic` INTEGER NOT NULL, `diastolic` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, `patient_id` INTEGER NOT NULL, FOREIGN KEY(`patient_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "measurementBloodpressureId",
+            "columnName": "measurement_bloodpressure_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "systolic",
+            "columnName": "systolic",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diastolic",
+            "columnName": "diastolic",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patient_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "measurement_bloodpressure_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_measurement_bloodpressure_measurement_bloodpressure_id",
+            "unique": true,
+            "columnNames": [
+              "measurement_bloodpressure_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_measurement_bloodpressure_measurement_bloodpressure_id` ON `${TABLE_NAME}` (`measurement_bloodpressure_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "patient_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "measurement_scale",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`measurement_scale_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weight` REAL NOT NULL, `fat` REAL NOT NULL, `muscle` REAL NOT NULL, `water` REAL NOT NULL, `timestamp` INTEGER NOT NULL, `patient_id` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "measurementScaleId",
+            "columnName": "measurement_scale_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fat",
+            "columnName": "fat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "muscle",
+            "columnName": "muscle",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "water",
+            "columnName": "water",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patient_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "measurement_scale_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_measurement_scale_measurement_scale_id",
+            "unique": true,
+            "columnNames": [
+              "measurement_scale_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_measurement_scale_measurement_scale_id` ON `${TABLE_NAME}` (`measurement_scale_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "permission",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`permission_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `permission_write` INTEGER NOT NULL, `permission_read_biometrical` INTEGER NOT NULL, `permission_read_psychometrical` INTEGER NOT NULL, `patient_id` INTEGER NOT NULL, `requester_id` INTEGER NOT NULL, FOREIGN KEY(`permission_write`) REFERENCES `permission_type`(`permission_type_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`permission_read_biometrical`) REFERENCES `permission_type`(`permission_type_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`permission_read_psychometrical`) REFERENCES `permission_type`(`permission_type_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`patient_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`requester_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "permissionId",
+            "columnName": "permission_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "permissionWrite",
+            "columnName": "permission_write",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "permissionReadBiometrical",
+            "columnName": "permission_read_biometrical",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "permissionReadPsychometrical",
+            "columnName": "permission_read_psychometrical",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patient_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requesterId",
+            "columnName": "requester_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "permission_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_permission_permission_id",
+            "unique": true,
+            "columnNames": [
+              "permission_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_permission_permission_id` ON `${TABLE_NAME}` (`permission_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "permission_type",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "permission_write"
+            ],
+            "referencedColumns": [
+              "permission_type_id"
+            ]
+          },
+          {
+            "table": "permission_type",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "permission_read_biometrical"
+            ],
+            "referencedColumns": [
+              "permission_type_id"
+            ]
+          },
+          {
+            "table": "permission_type",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "permission_read_psychometrical"
+            ],
+            "referencedColumns": [
+              "permission_type_id"
+            ]
+          },
+          {
+            "table": "user",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "patient_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          },
+          {
+            "table": "user",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "requester_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "permission_type",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`permission_type_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "permissionTypeId",
+            "columnName": "permission_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "permission_type_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_permission_type_permission_type_id",
+            "unique": true,
+            "columnNames": [
+              "permission_type_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_permission_type_permission_type_id` ON `${TABLE_NAME}` (`permission_type_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "questionnaire",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`questionnaire_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pain` INTEGER NOT NULL, `nausea` INTEGER NOT NULL, `shortness_of_breath` INTEGER NOT NULL, `vomit` INTEGER NOT NULL, `constipation` INTEGER NOT NULL, `weakness` INTEGER NOT NULL, `loss_of_appetite` INTEGER NOT NULL, `fatigue` INTEGER NOT NULL, `depression` INTEGER NOT NULL, `anxiety` INTEGER NOT NULL, `overall_situation` INTEGER NOT NULL, `filled_out_yourself` INTEGER NOT NULL, `additional_details` TEXT, `timestamp` INTEGER NOT NULL, `patient_id` INTEGER NOT NULL, FOREIGN KEY(`questionnaire_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "questionnaireId",
+            "columnName": "questionnaire_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pain",
+            "columnName": "pain",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nausea",
+            "columnName": "nausea",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shortnessOfBreath",
+            "columnName": "shortness_of_breath",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vomit",
+            "columnName": "vomit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constipation",
+            "columnName": "constipation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weakness",
+            "columnName": "weakness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lossOfAppetite",
+            "columnName": "loss_of_appetite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatigue",
+            "columnName": "fatigue",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "depression",
+            "columnName": "depression",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "anxiety",
+            "columnName": "anxiety",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "overallSituation",
+            "columnName": "overall_situation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "filledOutYourself",
+            "columnName": "filled_out_yourself",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "additionalDetails",
+            "columnName": "additional_details",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patient_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "questionnaire_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_questionnaire_questionnaire_id",
+            "unique": true,
+            "columnNames": [
+              "questionnaire_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_questionnaire_questionnaire_id` ON `${TABLE_NAME}` (`questionnaire_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionnaire_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "other_suffering",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`saved_answer_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `other_suffering` TEXT NOT NULL, `rating` INTEGER NOT NULL, `questionnaire_id` INTEGER NOT NULL, FOREIGN KEY(`questionnaire_id`) REFERENCES `questionnaire`(`questionnaire_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "otherSufferingId",
+            "columnName": "saved_answer_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "otherSuffering",
+            "columnName": "other_suffering",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionnaireId",
+            "columnName": "questionnaire_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "saved_answer_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_other_suffering_saved_answer_id",
+            "unique": true,
+            "columnNames": [
+              "saved_answer_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_other_suffering_saved_answer_id` ON `${TABLE_NAME}` (`saved_answer_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "questionnaire",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionnaire_id"
+            ],
+            "referencedColumns": [
+              "questionnaire_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "user",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `surname` TEXT NOT NULL, `name` TEXT NOT NULL, `mail` TEXT NOT NULL, `gender` INTEGER NOT NULL, `date_of_birth` INTEGER, `password_hash` TEXT NOT NULL, `salt` TEXT NOT NULL, `phone_number` TEXT NOT NULL, `created_date` INTEGER NOT NULL, `user_type_id` INTEGER NOT NULL, FOREIGN KEY(`user_type_id`) REFERENCES `user_type`(`user_type_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "surname",
+            "columnName": "surname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mail",
+            "columnName": "mail",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateOfBirth",
+            "columnName": "date_of_birth",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "passwordHash",
+            "columnName": "password_hash",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "salt",
+            "columnName": "salt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneNumber",
+            "columnName": "phone_number",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdDate",
+            "columnName": "created_date",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userTypeId",
+            "columnName": "user_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_user_user_id",
+            "unique": true,
+            "columnNames": [
+              "user_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_user_user_id` ON `${TABLE_NAME}` (`user_id`)"
+          },
+          {
+            "name": "index_user_mail",
+            "unique": true,
+            "columnNames": [
+              "mail"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_user_mail` ON `${TABLE_NAME}` (`mail`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user_type",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "user_type_id"
+            ],
+            "referencedColumns": [
+              "user_type_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "user_type",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_type_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "userTypeId",
+            "columnName": "user_type_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_type_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_user_type_user_type_id",
+            "unique": true,
+            "columnNames": [
+              "user_type_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_user_type_user_type_id` ON `${TABLE_NAME}` (`user_type_id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '362131c9004594fab22712992aabfed6')"
+    ]
+  }
+}

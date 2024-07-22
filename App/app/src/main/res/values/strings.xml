@@ -1,0 +1,366 @@
+<resources>
+    <string name="app_name">PalliCare</string>
+    <string name="img_logo_description">Logo</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="help">Hilfe</string>
+    <string name="ok">OK</string>
+    <string name="accepted">Verstanden</string>
+    <string name="quest_btn_prev">Zurück</string>
+    <string name="quest_btn_next">Weiter</string>
+    <string name="done">Abschließen</string>
+    <string name="logout">Abmelden</string>
+
+    <!--    Permission requests-->
+    <string name="permission_request">Erlaubnis benötigt</string>
+    <string name="limited_functionality_title">Funktionalität eingeschränkt</string>
+    <string name="limited_functionality_message">Ohne Berechtigung kann PalliCare die gewünschte Funktion nicht ausführen. Falls Sie die Funktion nutzen möchten, erlauben Sie bitte die Anfrage.</string>
+
+    <string name="fine_request">Um Bluetooth verwenden zu können, erfordert Android unumgänglich, dass Sie die Berechtigung \"Gerätestandort\" für diese App erlauben. PalliCare nutzt die Berechtigung ausschließlich für den Bluetooth-Zugriff.</string>
+    <string name="bluetooth_request">Damit Sie sich mit Ihrer Waage verbinden können müssen Sie im nächsten Fenster die drahtlose Funkverbindung \"Bluetooth\" anschalten.</string>
+    <!--  Base activity  -->
+    <string name="base_show_help">Hilfe anzeigen</string>
+    <string name="default_help_not_implemented">Bitte Hilfetext in getHelpText referenzieren.</string>
+
+    <!-- Permission Call Phone -->
+    <string name="permission_call_phone_header">Berechtigung Telefon</string>
+    <string name="permission_call_phone_text">Im Folgenden benötigt die App einige Zugriffsberechtigungen. Falls es Ihnen nicht gut gehen sollte, können Sie im Notfall mit Hilfe der App eine Person anrufen, deren Nummer Sie vorher eingespeichert haben. Dafür benötigt die App Ihre Erlaubnis, jemanden anzurufen. Die App verwendet nicht Ihr Telefonbuch.</string>
+    <string name="permission_call_phone_next">Weiter</string>
+
+    <!-- Permission Storage -->
+    <string name="permission_storage_header">Berechtigung Speicher</string>
+    <string name="permission_storage_text">Die App erfasst auch Ihre Gesundheitsdaten, damit sie Ihnen Informationen über Ihre Gesundheit geben kann. Zur Speicherung Ihrer Daten benötigen wir Ihre Erlaubnis, dass diese Daten auf Ihrem Handyspeicher gespeichert werden können.</string>
+    <string name="permission_storage_next">Weiter</string>
+
+    <!-- Permission Storage -->
+    <string name="permission_bluetooth_header">Berechtigung Bluetooth</string>
+    <string name="permission_bluetooth_text">Zur Erfassung Ihrer Gesundheitsdaten wird die Waage mit Ihrem Smartphone über Bluetooth verbunden. Dafür wird der Zugriff auf Ihren Standort benötigt, damit die Verbindung funktionieren kann.</string>
+    <string name="permission_bluetooth_next">Weiter</string>
+
+
+    <!--    login, register-->
+    <string name="username_hint">Benutzername</string>
+    <string name="password_hint">Passwort</string>
+    <string name="btn_login">Anmelden</string>
+    <string name="btn_register">Neuer Nutzer</string>
+    <string name="register_type_hint">Wie wollen Sie diese App benutzen?</string>
+    <string name="btn_register_patient">Patient / Patientin</string>
+    <string name="btn_register_doctor">Arzt / Ärztin</string>
+    <string name="register_string">Geben Sie Ihre Daten an</string>
+    <string name="register_tab_patient">Patient</string>
+    <string name="register_tab_nok">Angehöriger</string>
+    <string name="register_hint_name">Vorname</string>
+    <string name="register_hint_password">Passwort</string>
+    <string name="register_hint_surname">Nachname</string>
+    <string name="register_hint_mail">Email-Adresse</string>
+    <string name="register_hint_phone">Telefon</string>
+    <string name="register_register_text">Registrieren</string>
+    <string name="help_text_register">Bitte wählen Sie aus, ob Sie die App als Patient oder Angehöriger nutzen. Danach geben Sie bitte Ihre persönlichen Daten für die Registrierung ein. Unter Passwort können Sie selber ein Passwort für diese App festlegen.</string>
+    <string name="help_text_login">Benutzen Sie die App zum ersten Mal? Dann registieren Sie sich bitte unter Neuer Nutzer. Falls Sie sich schon registiert haben, geben Sie bitte Ihren Benutzernamen und das Passwort ein.</string>
+
+    <!--    overview page-->
+    <string name="tv_patient_overview_biometric_text">Meine biometrischen Daten</string>
+    <string name="btn_patient_overview_biometric_view">Ansehen</string>
+    <string name="btn_patient_overview_biometric_input">Eingeben</string>
+    <string name="btn_patient_overview_settings">Einstellungen</string>
+    <string name="tv_patient_overview_psychometric_text">Wie geht es mir heute?</string>
+    <string name="btn_patient_overview_psychometric_view">Ansehen</string>
+    <string name="btn_patient_overview_psychometric_input">Ausfüllen</string>
+    <string name="btn_access">Zugriff</string>
+    <string name="btn_help">Anleitung</string>
+    <string name="hint_quest">Wollen Sie den Fragebogen ausfüllen oder Ihre Werte ansehen? </string>
+    <string name="hint_devices">Wollen Sie eine neue Messung hinzufügen oder Ihre Werte ansehen? </string>
+    <string name="hint_help">Hier bekommen Sie Informationen über die verschiedenen Funktionen dieser App und wie man sie richtig verwendet. </string>
+    <string name="hint_settings">..?? </string> <!--TODO hint settings-->
+    <string name="help_text_patient_overview">Bitte wählen Sie eine Option. Unter Meine biometrischen Daten befinden sich Ihre Daten der Waage und Ihre Blutdruckwerte. Unter Wie geht es mir heute? befindet sich der Midos-Fragebogen. Unter Einstellungen können Sie Ihre persönlichen Daten sowie weitere App-Einstellungen finden. </string>
+
+    <!--    questionnaire checkboxes, buttons, strings-->
+    <string name="quest_info_text_first">Bitte geben Sie an, wie stark heute Ihre Beschwerden sind.</string>
+    <string name="quest_info_text_first_p2">Haben Sie andere Beschwerden?</string>
+    <string name="quest_info_text_second">Bitte geben Sie an, wie Sie sich heute fühlen.</string>
+    <string name="quest_info_text_third">Möchten Sie weitere Bemerkungen hinzufügen?</string>
+    <string name="quest_info_text_first_p2_input">Bitte wählen Sie aus, welche anderen Beschwerden Sie heute haben.</string>
+    <string name="quest_text_second">Befinden</string>
+    <string name="quest_info_text_fourth">Haben Sie den Fragebogen selbst ausgefüllt?</string>
+    <string name="quest_text_fourth">Selbsterfassung nicht möglich wegen:</string>
+    <string name="quest_finish_text">Die Umfrage wird nun gespeichert</string>
+    <string name="quest_finish_button_check">Überprüfen</string>
+    <string name="quest_finished_text">Ihre Umfrage wurde erfolgreich abgegeben</string>
+    <string name="quest_error">Beim Speichern wurde ein Problem festgestellt. Bitte probieren Sie Ihre Eingabe erneut.</string>
+
+    <string name="quest_suffer_info">Woran leiden Sie?</string>
+    <string name="quest_suffer_edit_hint">Bitte eingeben</string>
+    <string name="quest_m1p2_select_max_2">Bitte wählen Sie nur die 2 schlimmsten Leiden.</string>
+    <string name="quest_your_notes">Ihre Bemerkungen</string>
+
+
+    <string-array name="quest_suffering_types">
+        <item>Schmerzen</item>
+        <item>Übelkeit</item>
+        <item>Erbrechen</item>
+        <item>Luftnot</item>
+        <item>Verstopfung</item>
+        <item>Schwäche</item>
+        <item>Appetitmangel</item>
+        <item>Müdigkeit</item>
+        <item>Depressivität</item>
+        <item>Angst</item>
+    </string-array>
+
+    <string-array name="quest_answer_none">
+        <item>keine</item>
+        <item>keine</item>
+        <item>kein</item>
+        <item>keine</item>
+        <item>keine</item>
+        <item>keine</item>
+        <item>kein</item>
+        <item>keine</item>
+        <item>keine</item>
+        <item>keine</item>
+    </string-array>
+
+    <string-array name="quest_answer_low">
+        <item>leichte</item>
+        <item>leichte</item>
+        <item>leichtes</item>
+        <item>leichte</item>
+        <item>leichte</item>
+        <item>leichte</item>
+        <item>leichter</item>
+        <item>leichte</item>
+        <item>leichte</item>
+        <item>leichte</item>
+    </string-array>
+
+    <string-array name="quest_answer_moderate">
+        <item>mittlere</item>
+        <item>mittlere</item>
+        <item>mittleres</item>
+        <item>mittlere</item>
+        <item>mittlere</item>
+        <item>mittlere</item>
+        <item>mittlerer</item>
+        <item>mittlere</item>
+        <item>mittlere</item>
+        <item>mittlere</item>
+    </string-array>
+
+    <string-array name="quest_answer_severe">
+        <item>starke</item>
+        <item>starke</item>
+        <item>starkes</item>
+        <item>starke</item>
+        <item>starke</item>
+        <item>starke</item>
+        <item>starker</item>
+        <item>starke</item>
+        <item>starke</item>
+        <item>starke</item>
+    </string-array>
+
+    <string-array name="quest_submission_not_possible">
+        <item>Sprachproblemen</item>
+        <item>Schwäche</item>
+        <item>Kognitiven Störungen</item>
+        <item>Patient lehnt ab</item>
+        <item>keine Zeit</item>
+    </string-array>
+
+    <string-array name="quest_overall_condition">
+        <item>sehr gut</item>
+        <item>gut</item>
+        <item>mittel</item>
+        <item>schlecht</item>
+        <item>sehr schlecht</item>
+    </string-array>
+
+    <!--    patient settings page-->
+    <string name="btn_about_me">Über mich</string>
+    <string name="btn_next_of_kin">Kontakte</string>
+    <string name="btn_notification">Benachrichtigungen</string>
+    <string name="btn_settings_devices">Geräte verwalten</string>
+    <string name="help_text_patient_settings">Bitte wählen Sie eine Option. Ihre persönlichen Daten finden Sie unter Über mich. Unter Kontakte befinden sich Ihre hinterlegten Notfallkontakte. Bei Geräte Verwalten können Sie Ihre Bluetooth-Geräte bearbeiten. </string>
+    <string name="help_text_add_device">Bitte drücken sie auf die Schaltfläche \"Gerät suchen\", um unterstütze Geräte anzuzeigen. Klicken Sie dann auf ein Gerät, um es für die Benutzung einzurichten. Um ein hinzugefügtes  Gerät zu entfernen, drücken sie lange darauf.</string>
+
+    <!--    patient settings page-->
+    <string name="btn_nok_settings_mydata">Kontaktdaten</string>
+    <string name="btn_nok_settings_releatives">Angehörige</string>
+
+    <!--    NOK home activity-->
+    <string name="help_text_nok_home">Dies ist ihr Startbildschirm, von dem Sie alle Aktionen erreichen können.</string>
+    <string name="help_text_nok_setting">Hier können Sie Ihre Kontaktdaten pflegen oder neue Angehörige hinzufügen. Außerdem können Sie festlegen, wie die App Sie benachrichtigen soll.</string>
+
+    <!--    Measurement page-->
+    <string name="btn_weight">Gewicht</string>
+    <string name="btn_bloodpressure">Blutdruck</string>
+    <string name="help_text_biometric_view">Bitte wählen Sie aus, ob Sie den Verlauf Ihres Gewichts oder Ihres Blutdrucks anschauen möchten.</string>
+
+
+    <!--    Weight page-->
+    <string name="radio_btn_today">Heute</string>
+    <string name="radio_btn_week">Woche</string>
+    <string name="radio_btn_month">Monat</string>
+    <string name="radio_btn_year">Jahr</string>
+    <string name="help_text_weight_view">Hier wird der Durchschnitt Ihres Gewichts angezeigt. Sie können zwischen Woche, Monat und Jahr wählen. Die rote Linie ist Ihr maximales Gewicht, das nicht überschritten werden sollte.</string>
+
+
+    <!--    activity titles-->
+    <string name="quest_activity_title">Fragebogen</string>
+    <string name="quest_saved_activity_title">Abgeschlossen</string>
+    <string name="quest_finish_activity_title">Speichern?</string>
+    <string name="quest_error_activity_title">Fehler</string>
+
+    <string name="questionnaire_activity_title">Fragebogen</string>
+    <string name="login_activity_title">Pallicare</string>
+    <string name="overview_activity_title">Übersicht</string>
+    <string name="settings_activity_title">Einstellungen</string>
+    <string name="nextOfKin_activity_title">Meine Familie</string>
+    <string name="doctor_activity_title">Meine Patienten</string>
+    <string name="emergency_activity_title">Notfall</string>
+    <string name="deviceData_activity_title">Messungen</string>
+
+    <string name="weight_activity_title">Gewicht</string>
+    <string name="bloodPressure_activity_title">Blutdruck</string>
+    <string name="register_activity_title">Registierung</string>
+    <string name="select_measurement_input_activity_title">Messungen</string>
+    <string name="manage_devices_activity_title">Verbundene Geräte</string>
+    <string name="measurement_input_manual_activity_title">Manuelle Messungen</string>
+    <string name="suffers_overview_activity_title">Verlauf ansehen</string>
+    <string name="suffers_detailed_view_activity_title">Schmerzen</string>
+
+    <!-- emergency activity -->
+    <string name="emerg_stop_call">Keine Hilfe benötigt.\nAnruf stoppen</string>
+    <string name="emerg_keep_calm">Bleiben Sie ruhig. Ich hole Hilfe.</string>
+    <string name="emergency_whom_to_call">Wen möchten Sie anrufen?</string>
+
+    <!--    selectMeasurementInput overview page -->
+    <string name="select_measurement_input_infoText">Wie möchten Sie Ihre Messungen hinzufügen?</string>
+    <string name="btn_select_measurement_input_automatically">Messungen automatisch hinzufügen</string>
+    <string name="btn_select_measurement_input_manually">Messungen manuell eintragen</string>
+    <string name="help_text_select_measurement_input">Bitte wählen Sie aus, ob Sie ihre Messungen automatisch durchführen möchten (Verbindung der Geräte mit Bluetooth) oder die Messungen manuell eintragen möchten.</string>
+
+
+    <!--    doctor overview page -->
+    <string name="btn_doctor_patientOne">Harry Potter</string>
+    <string name="btn_doctor_patientTwo">Hermine Granger</string>
+    <string name="btn_doctor_patientThree">Ron Weasley</string>
+    <string name="btn_doctor_request">Neue Anfragen</string>
+    <string name="doctor_infoText">Ihre Patienten, um die Sie sich kümmern!</string>
+
+    <!--    next of kin overview page -->
+    <string name="btn_nextOfKin_familyOne">Max Mustermann</string>
+    <string name="btn_nextOfKin_familyTwo">Martina Musterfrau</string>
+    <string name="btn_nextOfKin_request">Neue Anfragen</string>
+    <string name="nextOfKin_infoText">Ihre Familienangehörigen, um die Sie sich kümmern!</string>
+
+    <!-- measurement input manual page -->
+    <string name="btn_measurementInput_weight_save">Speichern</string>
+    <string name="editText_measurementInput_weight_kg">kg</string>
+    <string name="btn_measurementInput_bp_save">Speichern</string>
+    <string name="editText_measurementInput_bp">mmHG</string>
+    <string name="editText_measurementInput_bp_slash">/</string>
+    <string name="help_text_biometric_manual_input">Bitte geben Sie Ihr Gewicht und Ihren Blutdruck in die dafür vorgesehenen Felder ein. Der systolische Druck ist der obere Messwert und entspricht dem höheren Wert auf Ihrem Blutdruckmessgerät. Der diastolische Blutdruck ist der untere Messwert und entspricht dem kleineren Wert auf Ihrem Gerät.</string>
+
+    <!--    manage devices screen-->
+    <string name="btn_add_device_hint">Gerät suchen</string>
+    <string name="tv_no_devices">Klicken Sie auf \"Gerät suchen\", um ein neues Gerät hinzuzufügen.</string>
+
+
+    <!--    TODO just to have some devices, later maybe no hardcoded text-->
+    <string name="btn_d1">Blutdruckmessgerät 1</string>
+    <string name="btn_d2">Waage 1</string>
+    <string name="btn_d3">Waage 2</string>
+    <string name="btn_d4">Blutdruckmessgerät 2</string>
+
+    <!--    activity_settings -->
+    <string name="descriptor_settings_overview_activity">Einstellungsübersicht</string>
+
+    <!-- activity_manage_devices -->
+    <string name="descriptor_manage_devices">Geräte verwalten</string>
+
+    <!-- activity_welcome_message_tab_patient -->
+    <string name="welcome_message_tab_patient">Patient</string>
+    <!-- activity_welcome_message_tab_patient -->
+    <string name="welcome_message_tab_nok">Angehöriger</string>
+    <!-- activity_welcome_message_text_patient -->
+    <string name="welcome_message_patient_text">Willkommen bei PalliCare! Ich werde dir dabei helfen, deine Gesundheitsdaten aufzuzeichnen. Ich erfasse deine Gesundheitsdaten, damit ich dir Informationen über deine Gesundheit geben kann.  Du bekommst einen sofortigen Überblick über deine gemessenen Werte und deinen  Gesundheitszustand. Auch kann ich im Notfall, falls es dir nicht gut gehen sollte, deine Familie kontaktieren. Durch dich kann ich auch anderen Menschen, die in einer ähnlichen Situation wie du sind, helfen. Ich kann deine gesammelten Daten zur Vorhersage des Gesundheitszustandes dieser Menschen nutzen. Lass uns beginnen!</string>
+    <!-- activity_welcome_message_text_next_of_kin -->
+    <!-- activity_welcome_message_button -->
+    <string name="welcome_message_button">Beginnen</string>
+    <string name="welcome_message_patient">Willkommen bei PalliCare! Ich werde dir dabei helfen, deine Gesundheitsdaten aufzuzeichnen. Ich erfasse deine Gesundheitsdaten, damit ich dir Informationen über deine Gesundheit geben kann. Du bekommst einen sofortigen Überblick über deine gemessenen Werte und deinen Gesundheitszustand. Auch kann ich im Notfall, falls es dir nicht gut gehen sollte, deine Familie kontaktieren. Durch dich kann ich auch anderen Menschen, die in einer ähnlichen Situation wie du sind, helfen. Ich kann deine gesammelten Daten zur Vorhersage des Gesundheitszustandes dieser Menschen nutzen. Lass uns beginnen!</string>
+    <string name="welcome_message_nok">Willkommen bei PalliCare! Sie werden eine Kontakt- und Notfallperson für einen Patienten sein. Ich werde die Gesundheitsdaten des Patienten aufzeichnen, damit ich ihm/ihr Informationen über die Gesundheit geben kann. Sie können diese Daten anschauen und somit einen Überblick über den Gesundheitszustand des Patienten bekommen. Im Notfall, falls es dem Patienten nicht gut geht, werden Sie benachrichtigt und somit sofort eingreifen, falls es ihm/ihr nicht gut gehen sollte. Durch Sie wird sich der Patient sicher fühlen und auch Sie werden immer einen Überblick über den Gesundheitszustand des Patienten haben. Lass uns beginnen!</string>
+
+    <!-- Helptexts /-->
+    <string name="help_quest_1p1_info">Nach einem Klick auf "Weiter" können Sie erfassen, wie stark heute Ihre Beschwerden sind.</string>
+    <string name="help_quest_1p2_add_suffers">Fügen Sie maximal zwei heutige Leiden hinzu und klicken Sie danach auf "Weiter".</string>
+    <string name="help_quest_1p2_info">Im nächsten Bildschirm können Sie maximal zwei Leiden hinzufügen, die Sie anschließend gewichten können.</string>
+    <string name="help_quest_1p2_question">Wenn Sie weitere Beschwerden erfassen wollen, klicken Sie auf "Ja". Ansonsten fahren Sie mit "Nein" fort.</string>
+    <string name="help_quest_1_rate_general">Wählen Sie aus, wie stark die Beschwerden für das angezeigte Leiden heute sind und bestätigen Sie Ihre Eingabe mit "Weiter".</string>
+    <string name="help_quest_2_info">Nach einem Klick auf "Weiter" können Sie erfassen, wie Sie sich heute fühlen.</string>
+    <string name="help_quest_2_rate">Bitte wählen Sie aus, wie Sie sich heute fühlen und bestätigen Sie Ihre Eingabe mit "Weiter".</string>
+    <string name="help_quest_3_input">Fürgen Sie weitere Bermerkungen hinzu und bestätigen Sie diese mit Klick auf "Abschließen".</string>
+    <string name="help_quest_3_question">Wenn Sie weitere Bemerkungen hinzufügen wollen, klicken Sie auf "Ja". Ansonsten fahren Sie mit "Nein" fort.</string>
+    <string name="help_quest_4_info">Wenn Sie den Fragebogen selbst ausgefüllt haben, klicken Sie auf "Ja". Ansonsten fahren Sie mit "Nein" fort.</string>
+    <string name="help_quest_4_rate">Bitte markieren Sie eine Option, wieso der Patient den Fragebogen nicht selbst ausfüllen konnte.</string>
+    <string name="help_quest_5_finish">Wenn Sie Ihre Eingaben nochmals lesen wollen, klicken Sie auf "Überpüfen".  Ansonsten fahren Sie mit "Abschließen" fort.</string>
+    <string name="help_quest_6_saved">Ihre Umfrage wurde erfolgreich gespeichert. Bitte klicken Sie nun auf "Weiter".</string>
+    <string name="help_quest_7_error">Beim Speichern Ihrer Antworten ist ein Fehler aufgetreten. Wenn er weiterhin besteht kontaktieren Sie bitte die Entwickler.</string>
+
+    <string name="help_emergency">Klicken Sie auf den Notfallkontakt, den Sie anrufen möchten.</string>
+
+    <!-- activity_ device_ measurements -->
+    <string name="descriptor_device_measurements">Gerät auslesen</string>
+    <string name="read_scale">Waage auslesen</string>
+    <string name="please_weigh_yourself_hint">Die Waage wurde verbunden.\n Bitte stellen Sie sich auf die Waage</string>
+    <string name="please_stand_still_hint">Bitte bleiben Sie ruhig auf der Waage stehen, bis die Messung beendet ist.</string>
+    <string name="scale_step_up">Bitte stellen Sie sich jetzt auf die Waage</string>
+    <string name="selected_device">Gewähltes Gerät</string>
+    <string name="no_such_address">Adresse nicht gefunden</string>
+    <string name="label_bt_device_no_support">Das Gerät wird nicht unterstützt.</string>
+    <string name="info_bluetooth_please_enable">Bluetooth wird benötigt, um eine Verbindung zur Waage herzustellen.</string>
+    <string name="info_bluetooth_init">Bluetooth Gerät wird initialisiert</string>
+    <string name="info_bluetooth_connection_lost">Die Verbindung zur Waage ist abgebrochen. Bitte starten Sie die Messung erneut.</string>
+    <string name="info_bluetooth_no_device">Die Waage wurde nicht gefunden. </string>
+    <string name="info_bluetooth_no_device_retrying">Verbindung nicht möglich. Erneuter Versuch..</string>
+    <string name="info_bluetooth_connection_successful">Gerät verbunden</string>
+    <string name="info_bluetooth_connection_disconnected">Die Verbindung wurde erfolgreich beendet.</string>
+    <string name="info_bluetooth_connection_error">Ein unerwarteter Fehler ist aufgetreten.</string>
+    <string name="info_bluetooth_connect_scale">Eine Verbindung mit der Waage wird hergestellt. Schalten Sie sie, wenn nötig an.</string>
+    <string name="info_scale_weight_saved">Ihr Gewicht beträgt\n%s kg.\nDie Messung wurde erfolgreich gespeichert.</string>
+    <string name="scale_problem_retry">Schließen</string>
+    <string name="help_text_add_measurement">Bitte folgen Sie den Anweisungen am Bildschirm. Bleiben Sie auf der Waage stehen, bis Ihnen durch einen Ton die erfolgreiche Messung signalisiert wird.</string>
+
+
+    <!-- bluetooth beurer sanitas -->
+    <string name="info_bluetooth_connection_error_scale_offline">Verbindung mit Waage nicht möglich. Bitte das Gerät einschalten</string>
+    <string name="info_measuring">Gewichtsmessung: %.2f</string>
+    <string name="info_scale_low_battery">Niedrige Batterieladung (%d\%%), bitte Batterien wechseln</string>
+    <string name="info_step_on_scale_for_reference">Bitte barfuß auf die Waage treten, um Referenzwert zu erhalten</string>
+    <string name="error_max_scale_users">Max. Anzahl gleichzeitiger Waagenbenutzer erreicht</string>
+    <string name="average_weight">Ø Gewicht:</string>
+    <string name="average_feedback">unter Maximalgewicht</string>
+    <string name="average_bloodpressure">Ø Blutdruck:</string>
+    <string name="belowMaximum">unter Maximalwert</string>
+    <string name="overMaximum">über Maximalwert</string>
+    <string name="kg">kg</string>
+    <string name="help_text_blood_pressure_view">Hier wird der Durchschnitt Ihres Blutdrucks angezeigt. Sie können zwischen Woche, Monat und Jahr wählen. Die rote Linie ist Ihr maximaler Blutdruckwert, der nicht überschritten werden sollte.</string>
+
+
+    <!-- tablayout for displaying time-periods-->
+    <string name="tab_week">Woche</string>
+    <string name="tab_month">Monat</string>
+    <string name="tab_year">Jahr</string>
+
+    <!-- activity_sufferings_detailed-->
+    <string name="average">Durchschnitt Ø:</string>
+    <string name="help_text_sufferings_overview">Hier wird der Durchschnitt Ihrer Beschwerden angezeigt und visuell durch Smileys dargestellt. Sie können zwischen Woche, Monat und Jahr wählen.</string>
+
+
+    <!-- activity_sufferings_detailed to display average values-->
+    <string name="no_suffering">keine Beschwerden</string>
+    <string name="light_suffering">leichte Beschwerden</string>
+    <string name="medium_suffering">mittlere Beschwerden</string>
+    <string name="high_suffering">starke Beschwerden</string>
+
+</resources>
